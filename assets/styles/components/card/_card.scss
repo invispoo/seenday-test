@@ -1,6 +1,7 @@
 .card {
     padding: 15px;
-    &__header {
+
+    &__title {
         @include start-at("xslg") {
             font-size: 18px;
         }

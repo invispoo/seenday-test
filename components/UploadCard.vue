@@ -1,8 +1,8 @@
 <template>
     <div class="block">
-        <div class="upload-card">
-            <div>
-                <div v-html="taskDate"></div>
+        <div>
+            <div class="upload-page__upload-card" :class="status === 'green' ?  'upload-page__upload-card_success' :  'upload-page__upload-card_danger'">
+                <div v-html="taskDate"/>
                 <div>
                     Статус задачи:
                     <span class="text-bold">{{ statusText }}</span>
@@ -11,7 +11,7 @@
                     ID выгрузки:
                     <span class="text-bold">{{ unloadId }}</span>
                 </div>
-                <div v-html="event"></div>
+                <div v-html="event"/>
                 <div>
                     Размер выгрузки:
                     <span class="text-bold">{{ size }}</span>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-    import "~/assets/styles/pages/upload/upload-card.scss"
+    import "~/assets/styles/pages/upload/upload-page.scss"
     import { computed } from 'vue'
 
     const props = defineProps({
@@ -31,6 +31,7 @@
         event: String,
         size: String,
         id: String,
+        status: String
     })
 
     const unloadId = computed(() => props.id - 2111)

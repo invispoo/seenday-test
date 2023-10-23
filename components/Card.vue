@@ -1,7 +1,7 @@
 <template>
     <div class="block">
         <div class="card">
-            <div class="text-bold card__header">{{ title }}</div>
+            <div class="text-bold card__title">{{ title }}</div>
             <br>
             <div class="text-bold">{{ subtitle }}</div>
             <div class="card__text">{{ text }}</div>
