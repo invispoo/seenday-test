@@ -1,0 +1,14 @@
+.card {
+    padding: 15px;
+    &__header {
+        @include start-at("xslg") {
+            font-size: 18px;
+        }
+        @include active-by("xslg") {
+            font-size: 20px;
+        }
+    }
+    &__text {
+        white-space: pre-wrap;
+    }
+}
